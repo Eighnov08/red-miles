@@ -1,0 +1,42 @@
+{
+  "xlHome": {
+    "title_": "About XL HOME",
+    "article": [
+      {
+        "title": "Brand Goal & Positioning",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.",
+        "link": ""
+      },
+      {
+        "title": "Brand Identity",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.",
+        "link": ""
+      },
+      {
+        "title": "Target Audience",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.",
+        "link": ""
+      }
+    ]
+  },
+  "redMiles": {
+    "title_": "About RED MILES",
+    "article": [
+      {
+        "title": "Brand Goal & Positioning",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.",
+        "link": ""
+      },
+      {
+        "title": "Brand Identity",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.",
+        "link": ""
+      },
+      {
+        "title": "Target Audience",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum repudiandae maiores, molestias quibusdam ipsa sunt labore cupiditate quam esse.",
+        "link": ""
+      }
+    ]
+  }
+}
