@@ -68,7 +68,19 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    credentials: false,
+    proxy: true,
+    baseURL: 'http://redcomm-betatest.com/users/fajar/data.json',
+    // baseURL: 'http://127.0.0.1:8000/api/v1',
+    headers: {
+      accept: 'application/json',
+    },
+  },
+
+  publicRuntimeConfig: {
+    apiUrl: 'http://redcomm-betatest.com/users/fajar/data.json',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
