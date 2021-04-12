@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="container__about">
+    <div class="about">
       <HeaderAbout />
-      <div class="content content__about">
+      <div class="content about">
         <ArticleXl />
       </div>
       <div class="btn-wrapper-about">

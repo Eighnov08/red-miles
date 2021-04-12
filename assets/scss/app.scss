@@ -109,7 +109,7 @@ html {
       }
     }
 
-    &__about {
+    .about {
       .btn-wrapper-about {
         position: absolute;
         left: get-vw(150px);
@@ -287,7 +287,7 @@ html {
           }
         }
       }
-      &__about {
+      &.about {
         padding: 5vw 0;
         .content-wrapper {
           display: flex;
