@@ -1,17 +1,19 @@
 <template>
-  <div class="container">
-    <div class="about">
-      <HeaderAbout />
-      <div class="content statistic">
-        <CardImg />
-        <CardSosmed />
-        <CardAudience />
-        <CardOptimumPostReach />
-        <CardOptimumPostER />
-      </div>
-      <div class="btn-wrapper_">
-        <BtnFind />
-        <BtnBack />
+  <div class="container-fluid">
+    <div class="container">
+      <div class="about">
+        <HeaderAbout />
+        <div class="content statistic">
+          <CardImg />
+          <CardSosmed />
+          <CardAudience />
+          <CardOptimumPostReach />
+          <CardOptimumPostER />
+        </div>
+        <div class="btn-wrapper_">
+          <BtnFind />
+          <BtnBack />
+        </div>
       </div>
     </div>
   </div>

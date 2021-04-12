@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <div class="about">
-      <HeaderAbout />
-      <div class="content about">
-        <ArticleRedMiles />
-      </div>
-      <div class="btn-wrapper-about">
-        <BtnBack />
+  <div class="container-fluid">
+    <div class="container">
+      <div class="about">
+        <HeaderAbout />
+        <div class="content about">
+          <ArticleRedMiles />
+        </div>
+        <div class="btn-wrapper-about">
+          <BtnBack />
+        </div>
       </div>
     </div>
   </div>

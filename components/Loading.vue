@@ -25,6 +25,7 @@ export default {
 <style lang="scss">
 .loading-page {
   position: relative;
+  z-index: 9999;
   .loading {
     position: absolute;
     top: 43%;
