@@ -80,7 +80,12 @@ html {
     }
   }
   .container-fluid {
-    .desktop-banner,
+    @media only screen and (max-width: 1024px) {
+      .desktop-banner {
+        display: none;
+      }
+    }
+
     .mobile-banner {
       width: 100%;
       height: 100%;
@@ -94,7 +99,9 @@ html {
       padding: get-vw(40px) get-vw(57px);
       background-repeat: no-repeat !important;
       background-size: cover !important;
-
+      @media only screen and (max-width: 1024px) {
+        padding: 0;
+      }
       &.home {
         // background: url('~assets/images/background.svg');
       }
@@ -171,6 +178,9 @@ html {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        @media only screen and (max-width: 1024px) {
+          display: none;
+        }
         .copy {
           display: flex;
           align-items: center;
@@ -237,6 +247,12 @@ html {
           flex-direction: column;
           justify-content: center;
           font-family: 'PoppinsExtraLight', sans-serif;
+          .title-mobile {
+            display: none;
+          }
+          .menu {
+            display: none;
+          }
           .v-select {
             #vs2,
             #vs3 {
@@ -603,6 +619,113 @@ html {
                   }
                 }
               }
+            }
+          }
+        }
+        @media only screen and (max-width: 1024px) {
+          padding: 0;
+          margin-top: 50vw;
+          display: flex;
+          justify-content: center;
+          .card {
+            width: 100%;
+            margin-top: 23vw;
+            border-radius: 9vw;
+            .title-mobile {
+              padding: 40px;
+              color: $red;
+              display: flex;
+              justify-content: flex-start;
+              h1 {
+                font-size: get-vw(120px);
+                font-family: 'PoppinsSemiBold', sans-serif;
+              }
+            }
+            .menu {
+              padding: 1px 5px;
+              display: flex;
+              justify-content: space-evenly;
+              .designer {
+                a {
+                  border: 2px #dadce0 solid;
+                  border-radius: 10px;
+                  padding: 30px 15px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                }
+                .card-body {
+                  margin-top: 5vw;
+                  .card-title {
+                    color: $red;
+                    font-size: get-vw(58px);
+                    font-family: 'PoppinsSemiBold', sans-serif;
+                  }
+                }
+              }
+              .copy-writer {
+                a {
+                  border: 2px #dadce0 solid;
+                  border-radius: 10px;
+                  padding: 30px 15px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                }
+                .card-body {
+                  margin-top: 5vw;
+                  .card-title {
+                    color: $red;
+                    font-size: get-vw(58px);
+                    font-family: 'PoppinsSemiBold', sans-serif;
+                  }
+                }
+              }
+            }
+            .v-select {
+              display: none;
+              #vs2,
+              #vs3 {
+                &__combobox {
+                  display: none;
+                }
+                &__listbox {
+                  display: none;
+                }
+              }
+              .vs {
+                &__search {
+                  color: #4b4c4f;
+                  font-family: 'PoppinsExtraLight', sans-serif;
+                  font-size: get-vw(12px);
+                }
+                &__selected {
+                  font-size: get-vw(12px);
+                }
+              }
+            }
+            .file-wrapper {
+              display: none;
+              #select-file {
+                display: none;
+              }
+              .plus-circles {
+                color: #bfbfbf;
+                font-size: get-vw(70px);
+                cursor: pointer;
+                &:hover {
+                  color: $green;
+                }
+              }
+              h2 {
+                font-size: get-vw(20px);
+              }
+              p {
+                font-size: get-vw(12px);
+              }
+            }
+            .submit {
+              display: none;
             }
           }
         }

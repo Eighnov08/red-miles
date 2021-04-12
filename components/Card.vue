@@ -20,6 +20,35 @@
     <nuxt-link to="/detail/xl" class="send">
       <button type="submit" class="submit">Send</button></nuxt-link
     >
+    <div class="title-mobile">
+      <h1>Hi! Welcome to Red Miles. I'm a?</h1>
+    </div>
+    <div class="menu">
+      <div class="designer">
+        <a href="#" class="custom-card">
+          <img
+            class="card-img-top"
+            src="~/assets/images/pencil.svg"
+            alt="pencil"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Designer</h5>
+          </div>
+        </a>
+      </div>
+      <div class="copy-writer">
+        <a href="#" class="custom-card">
+          <img
+            class="card-img-top"
+            src="~/assets/images/bulpoint.svg"
+            alt="pencil"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Copy Writer</h5>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
