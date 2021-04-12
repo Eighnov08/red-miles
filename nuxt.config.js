@@ -29,10 +29,11 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/scss/app.scss', '@/assets/scss/transitions.scss'],
 
-  loading: {
-    color: '#F16912',
-    height: '5px',
-  },
+  // loading: {
+  //   color: '#F16912',
+  //   height: '5px',
+  // },
+  loading: '~/components/Loading.vue',
   pageTransition: {
     name: 'fade',
     mode: 'out-in',

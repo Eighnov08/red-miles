@@ -7,7 +7,7 @@
         steps.
       </p>
     </div>
-    <nuxt-link to="/about">About RED MILES</nuxt-link>
+    <nuxt-link to="/about/redmiles">About RED MILES</nuxt-link>
   </div>
 </template>
 

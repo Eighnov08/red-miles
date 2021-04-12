@@ -1,7 +1,7 @@
 <template>
-  <div class="container container--home">
+  <div class="container home">
     <HeaderHome />
-    <div class="content content--home">
+    <div class="content home">
       <Card />
     </div>
   </div>

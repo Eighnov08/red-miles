@@ -12,7 +12,8 @@ $vw-viewport-mobile: 414;
   @return $size;
 }
 
-$redMiles: #fc4750;
+$red: #fc4750;
+$green: #66c364;
 
 @font-face {
   font-family: 'PoppinsExtraLight';
@@ -69,20 +70,18 @@ html {
     margin: 0 auto;
     padding: get-vw(40px) get-vw(57px);
     min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 
-    &--home {
+    &.home {
       background: url('~assets/images/background.svg');
     }
-
     .btn-back {
-      position: absolute;
-      left: get-vw(150px);
-      bottom: get-vw(200px);
       font-size: get-vw(25px);
       display: flex;
+      justify-content: center;
       align-items: center;
+      text-decoration: none;
       cursor: pointer;
       .arrow-left {
         font-size: get-vw(20px);
@@ -94,6 +93,53 @@ html {
         font-size: get-vw(14px);
         color: #808080;
         font-family: 'PoppinsExtraLight', sans-serif;
+      }
+    }
+    .btn-find {
+      display: block;
+      background: #363636;
+      padding: 20px 40px;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-family: 'PoppinsRegular', sans-serif;
+      &:hover {
+        background-color: $red;
+        color: white;
+      }
+    }
+
+    &__about {
+      .btn-wrapper-about {
+        position: absolute;
+        left: get-vw(150px);
+        bottom: get-vw(200px);
+      }
+      .btn-wrapper_ {
+        position: absolute;
+        right: get-vw(220px);
+        top: get-vw(850px);
+        .c-btn-find {
+          margin-bottom: get-vw(20px);
+        }
+        .btn-back-statistic {
+          font-size: get-vw(25px);
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          cursor: pointer;
+          .arrow-left_ {
+            font-size: get-vw(20px);
+            margin-right: get-vw(10px);
+            color: #808080;
+          }
+          .back {
+            line-height: get-vw(30px);
+            font-size: get-vw(14px);
+            color: #808080;
+            font-family: 'PoppinsExtraLight', sans-serif;
+          }
+        }
       }
     }
 
@@ -123,9 +169,9 @@ html {
         text-decoration: none;
         font-family: 'PoppinsSemiBold', sans-serif;
         font-size: get-vw(15px);
-        color: $redMiles;
+        color: $red;
         &:hover {
-          background-color: $redMiles;
+          background-color: $red;
           color: white;
         }
       }
@@ -147,6 +193,10 @@ html {
             &:nth-child(2) {
               border: 1px solid #dadce0;
               border-radius: 0 get-vw(15px) get-vw(15px) 0;
+            }
+            &.nuxt-link-active {
+              background-color: $red;
+              color: white;
             }
           }
         }
@@ -204,7 +254,7 @@ html {
             font-size: get-vw(70px);
             cursor: pointer;
             &:hover {
-              color: #66c364;
+              color: $green;
             }
           }
           h2 {
@@ -224,13 +274,20 @@ html {
           font-size: 15px;
           font-family: 'PoppinsSemiBold', sans-serif;
           cursor: pointer;
+          .send {
+            color: #fc4750;
+            text-decoration: none;
+          }
           &:hover {
             background-color: #fc4750;
             color: #fff;
+            .send {
+              color: #fff;
+            }
           }
         }
       }
-      &--about {
+      &__about {
         padding: 5vw 0;
         .content-wrapper {
           display: flex;
@@ -254,11 +311,194 @@ html {
                 width: get-vw(350px);
               }
               .desc {
+                font-family: 'Poppins-ExtraLight', sans-serif;
                 font-size: get-vw(14px);
                 line-height: get-vw(24px);
                 color: #808080;
                 margin: get-vw(20px) 0;
+                width: get-vw(850px);
+              }
+              a {
+                text-decoration: none;
                 font-family: 'Poppins-ExtraLight', sans-serif;
+                font-size: get-vw(14px);
+                color: #808080;
+              }
+            }
+          }
+        }
+      }
+      &.statistic {
+        padding: 5vw;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-items: center;
+        .box_ {
+          .copy-wrapper {
+            margin-bottom: get-vw(10px);
+            .brand {
+              font-family: 'PoppinsRegular', sans-serif;
+              font-family: get-vw(30px);
+            }
+            .type {
+              font-family: 'PoppinsExtraLight', sans-serif;
+              font-family: get-vw(15px);
+            }
+          }
+          &:first-child,
+          &:nth-child(2) {
+            .card_ {
+              padding: 0;
+              background: transparent;
+            }
+          }
+          .card_ {
+            position: relative;
+            width: calc(72vw / 3);
+            height: 24vw;
+            border-radius: get-vw(25px);
+            background: #fdf4f2;
+            margin-bottom: get-vw(100px);
+            padding: get-vw(25px);
+            img {
+              width: 100%;
+            }
+            .card-sosmed {
+              height: inherit;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              .card-reach-er {
+                background: #fdf4f2;
+                padding: get-vw(25px);
+                border-radius: get-vw(25px);
+                height: 63%;
+                .copy-wrapper {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-evenly;
+                  .copy {
+                    font-family: 'PoppinsRegular', sans-serif;
+                    text-align: center;
+                    margin: 0 get-vw(30px);
+                    .title_ {
+                      font-size: get-vw(18px);
+                    }
+                    .number {
+                      font-size: get-vw(60px);
+                      color: $green;
+                      line-height: get-vw(85px);
+                      font-family: 'PoppinsRegular', sans-serif;
+                    }
+                    &:nth-child(2) {
+                      .number {
+                        color: $red;
+                      }
+                    }
+                  }
+                }
+                .status {
+                  .circle-wrapper {
+                    font-family: 'PoppinsRegular', sans-serif;
+                    display: flex;
+                    align-items: center;
+                    &:first-child {
+                      margin-bottom: get-vw(15px);
+                    }
+                    svg {
+                      font-size: get-vw(21px);
+                      margin-right: 15px;
+                      color: $green;
+                    }
+                    &:nth-child(2) {
+                      svg {
+                        color: $red;
+                      }
+                    }
+                    p {
+                      font-size: get-vw(13px);
+                    }
+                  }
+                }
+              }
+              .desc_ {
+                height: 33%;
+                background: #fdf4f2;
+                padding: 25px;
+                border-radius: 25px;
+                font-family: 'PoppinsRegular', sans-serif;
+                font-size: get-vw(12px);
+                color: $red;
+                text-align: center;
+              }
+            }
+            .card-audience {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              .card-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                .title-reach {
+                  font-family: 'PoppinsRegular', sans-serif;
+                  text-align: center;
+                  font-size: 1.2vw;
+                }
+                .gender-wrapper {
+                  text-align: center;
+                  .box {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    .fa-mars,
+                    .fa-venus {
+                      font-size: 25px;
+                      margin-right: 10px;
+                    }
+                    p {
+                      font-size: get-vw(18px);
+                      font-family: 'PoppinsRegular', sans-serif;
+                    }
+                  }
+                  .percentage {
+                    font-family: 'PoppinsRegular', sans-serif;
+                    font-size: get-vw(60px);
+                    color: $green;
+                  }
+                }
+              }
+              .population {
+                height: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .box_ {
+                  background: white;
+                  border-radius: get-vw(15px);
+                  padding: 5px 10px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  font-family: 'PoppinsRegular', sans-serif;
+                  .fa-clock {
+                    font-size: get-vw(20px);
+                  }
+                  .age {
+                    font-size: 1.5vw;
+                    line-height: get-vw(40px);
+                    color: $green;
+                  }
+                  .percentage_ {
+                    color: #808080;
+                    font-size: 1vw;
+                  }
+                  img {
+                    width: 1vw;
+                  }
+                }
               }
             }
           }
