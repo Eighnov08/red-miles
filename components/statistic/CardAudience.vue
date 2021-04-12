@@ -1,8 +1,8 @@
 <template>
   <div class="box_">
     <div class="copy-wrapper">
-      <p class="brand">XL HOME</p>
-      <p class="type">brand</p>
+      <p class="brand">Audience</p>
+      <p class="type">On Facebook</p>
     </div>
     <div class="card_">
       <div class="card-audience">
