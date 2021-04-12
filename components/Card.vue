@@ -17,9 +17,9 @@
       <h2>Add your files</h2>
       <p>Add up to 10 MB</p>
     </div>
-    <button type="submit" class="submit">
-      <nuxt-link to="/detail/xl" class="send">Send</nuxt-link>
-    </button>
+    <nuxt-link to="/detail/xl" class="send">
+      <button type="submit" class="submit">Send</button></nuxt-link
+    >
   </div>
 </template>
 
