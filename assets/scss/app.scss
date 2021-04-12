@@ -99,6 +99,7 @@ html {
       display: block;
       background: #363636;
       padding: 20px 40px;
+      margin-bottom: 80px;
       border-radius: 10px;
       color: white;
       text-decoration: none;
@@ -118,7 +119,7 @@ html {
       .btn-wrapper_ {
         position: absolute;
         right: get-vw(220px);
-        top: get-vw(850px);
+        top: get-vw(900px);
         .c-btn-find {
           margin-bottom: get-vw(20px);
         }
@@ -334,6 +335,9 @@ html {
         grid-template-columns: auto auto auto;
         justify-items: center;
         .box_ {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           .copy-wrapper {
             margin-bottom: get-vw(10px);
             .brand {
@@ -343,6 +347,28 @@ html {
             .type {
               font-family: 'PoppinsExtraLight', sans-serif;
               font-family: get-vw(15px);
+            }
+            &.sosmed {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              a {
+                width: get-vw(110px);
+                height: get-vw(30px);
+                border: 1px solid #808080;
+                border-radius: 50rem;
+                text-decoration: none;
+                color: #808080;
+                font-size: 1vw;
+                font-family: 'PoppinsExtraLight', sans-serif;
+                text-align: center;
+                line-height: get-vw(30px);
+                &.active {
+                  font-family: 'PoppinsRegular', sans-serif;
+                  color: #363636;
+                  border-color: #363636;
+                }
+              }
             }
           }
           &:first-child,

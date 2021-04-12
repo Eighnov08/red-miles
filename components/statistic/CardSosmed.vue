@@ -1,8 +1,9 @@
 <template>
   <div class="box_">
-    <div class="copy-wrapper">
-      <p class="brand">XL HOME</p>
-      <p class="type">brand</p>
+    <div class="copy-wrapper sosmed">
+      <a href="" class="active">Facebook</a>
+      <a href="">Instagram</a>
+      <a href="">Twitter</a>
     </div>
     <div class="card_">
       <div class="card-sosmed">
