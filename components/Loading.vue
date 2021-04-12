@@ -1,7 +1,8 @@
 <template lang="html">
   <div v-if="loading" class="loading-page">
     <div class="loading"></div>
-    <img src="~assets/images/loading.svg" />
+    <img src="~assets/images/loading.svg" class="for-desktop" />
+    <img src="~assets/images/loading-mobile.svg" class="for-mobile" />
   </div>
 </template>
 
@@ -36,6 +37,9 @@ export default {
     height: 50px;
     width: 50px;
     animation: rot 0.6s infinite linear;
+    @media only screen and (max-width: 1024px) {
+      top: 35%;
+    }
   }
   @keyframes rot {
     from {
