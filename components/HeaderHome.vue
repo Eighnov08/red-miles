@@ -1,12 +1,19 @@
 <template>
   <div class="header header-home">
     <div class="copy">
+      <div v-if="!isDesktop" class="blank"></div>
       <nuxt-link to="/" @click.native="$router.go()">
         <Icon name="red-miles-white" />
       </nuxt-link>
+      <nuxt-link to="/about/redmiles" @click.native="$router.go()">
+        <font-awesome-icon
+          v-if="!isDesktop"
+          class="plus-circles"
+          :icon="['fas', 'info-circle']"
+        />
+      </nuxt-link>
       <p v-if="isDesktop">
-        Image to Reach & ER prediction with <br />machine learning in 2 quick
-        steps.
+        Image to Reach & ER prediction with machine learning in 2 quick steps.
       </p>
     </div>
     <nuxt-link v-if="isDesktop" to="/about/redmiles" class="btnAbout"

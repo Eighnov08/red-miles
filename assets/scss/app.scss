@@ -67,7 +67,6 @@ html {
   box-sizing: border-box;
 
   .for-desktop {
-    display: block !important;
     @media only screen and (max-width: 1024px) {
       display: none !important;
     }
@@ -108,27 +107,43 @@ html {
         align-items: center;
         text-decoration: none;
         cursor: pointer;
+        @media only screen and (max-width: 1024px) {
+          font-size: get-vw(25px, $mobile: true);
+        }
         .arrow-left {
           font-size: get-vw(20px);
           margin-right: get-vw(10px);
           color: #808080;
+          @media only screen and (max-width: 1024px) {
+            font-size: get-vw(20px, $mobile: true);
+            margin-right: get-vw(10px, $mobile: true);
+          }
         }
         p {
           line-height: get-vw(30px);
           font-size: get-vw(14px);
           color: #808080;
           font-family: 'PoppinsExtraLight', sans-serif;
+          @media only screen and (max-width: 1024px) {
+            line-height: get-vw(30px, $mobile: true);
+            font-size: get-vw(14px, $mobile: true);
+          }
         }
       }
       .btn-find {
         display: inline-block;
         background: #363636;
-        padding: 20px 40px;
-        margin-bottom: 80px;
-        border-radius: 10px;
+        padding: get-vw(20px) get-vw(40px);
+        margin-bottom: get-vw(80px);
+        border-radius: get-vw(10px);
         color: white;
         text-decoration: none;
         font-family: 'PoppinsRegular', sans-serif;
+        @media only screen and (max-width: 1024px) {
+          padding: get-vw(20px, $mobile: true) get-vw(40px, $mobile: true);
+          margin-bottom: get-vw(80px, $mobile: true);
+          border-radius: get-vw(10px, $mobile: true);
+        }
         &:hover {
           background-color: $red;
           color: white;
@@ -233,6 +248,13 @@ html {
           }
           .copy {
             color: white;
+            @media only screen and (max-width: 1024px) {
+              width: 100%;
+              align-items: center;
+            }
+            a {
+              color: #fff;
+            }
           }
         }
         &.header-detail {
@@ -348,23 +370,40 @@ html {
           .content-wrapper {
             display: flex;
             flex-direction: row;
+            @media only screen and (max-width: 1024px) {
+              flex-direction: column;
+            }
             .title_ {
               width: 25%;
               text-align: center;
               font-size: get-vw(18px);
               font-family: 'PoppinsRegular', sans-serif;
               line-height: get-vw(50px);
+              @media only screen and (max-width: 1024px) {
+                width: 100%;
+                font-size: get-vw(18px, $mobile: true);
+                text-align: left;
+                margin-bottom: get-vw(20px);
+              }
             }
             .article-wrapper {
               width: 75%;
               .article {
                 margin-bottom: get-vw(90px);
+                @media only screen and (max-width: 1024px) {
+                  margin-bottom: get-vw(90px, $mobile: true);
+                }
                 .title-article {
                   font-size: get-vw(40px);
                   color: #fc4750;
                   font-family: 'PoppinsSemiBold', sans-serif;
                   line-height: get-vw(48px);
                   width: get-vw(350px);
+                  @media only screen and (max-width: 1024px) {
+                    line-height: get-vw(48px, $mobile: true);
+                    width: get-vw(350px, $mobile: true);
+                    font-size: get-vw(40px, $mobile: true);
+                  }
                 }
                 .desc {
                   font-family: 'Poppins-ExtraLight', sans-serif;
@@ -373,12 +412,21 @@ html {
                   color: #808080;
                   margin: get-vw(20px) 0;
                   width: get-vw(850px);
+                  @media only screen and (max-width: 1024px) {
+                    font-size: get-vw(14px, $mobile: true);
+                    line-height: get-vw(24px, $mobile: true);
+                    margin: get-vw(20px, $mobile: true) 0;
+                    width: 100%;
+                  }
                 }
                 a {
                   text-decoration: none;
                   font-family: 'Poppins-ExtraLight', sans-serif;
                   font-size: get-vw(14px);
                   color: #808080;
+                  @media only screen and (max-width: 1024px) {
+                    font-size: get-vw(14px, $mobile: true);
+                  }
                 }
               }
             }
