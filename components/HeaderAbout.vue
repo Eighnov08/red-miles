@@ -1,5 +1,5 @@
 <template>
-  <div class="header header-detail">
+  <div v-if="isDesktop" class="header header-detail">
     <div class="copy">
       <nuxt-link to="/" @click.native="$router.go()">
         <Icon name="red-miles-red" />

@@ -383,15 +383,18 @@ html {
                 width: 100%;
                 font-size: get-vw(18px, $mobile: true);
                 text-align: left;
-                margin-bottom: get-vw(20px);
+                margin-bottom: get-vw(20px, $mobile: true);
               }
             }
             .article-wrapper {
               width: 75%;
+              @media only screen and (max-width: 1024px) {
+                width: 100%;
+              }
               .article {
                 margin-bottom: get-vw(90px);
                 @media only screen and (max-width: 1024px) {
-                  margin-bottom: get-vw(90px, $mobile: true);
+                  margin-bottom: get-vw(50px, $mobile: true);
                 }
                 .title-article {
                   font-size: get-vw(40px);
