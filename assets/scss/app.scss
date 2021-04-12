@@ -72,9 +72,16 @@ html {
     min-height: 100vh;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    @media only screen and (max-width: 1024px) {
+      min-height: auto;
+    }
 
     &.home {
       background: url('~assets/images/background.svg');
+      @media only screen and (max-width: 1024px) {
+        background: url('~assets/images/background-mobile.svg');
+        padding: 0;
+      }
     }
     .btn-back {
       font-size: get-vw(25px);
@@ -148,6 +155,9 @@ html {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
       .copy {
         display: flex;
         align-items: center;
@@ -204,6 +214,12 @@ html {
     }
     .content {
       padding: 10vw 10vw 5vw;
+      @media only screen and (max-width: 1024px) {
+        // display: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
       .card {
         width: get-vw(250px);
         height: fit-content;
@@ -214,6 +230,16 @@ html {
         flex-direction: column;
         justify-content: center;
         font-family: 'PoppinsExtraLight', sans-serif;
+        @media only screen and (max-width: 1024px) {
+          width: 100%;
+          background: #fff;
+          padding: get-vw(27px);
+          border-radius: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-family: 'PoppinsExtraLight', sans-serif;
+        }
         .v-select {
           #vs2,
           #vs3 {
