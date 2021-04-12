@@ -12,7 +12,7 @@
         </div>
         <div class="btn-wrapper_">
           <BtnFind />
-          <BtnBack />
+          <BtnBack class="for-desktop" />
         </div>
       </div>
     </div>

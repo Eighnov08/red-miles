@@ -67,16 +67,16 @@ html {
   box-sizing: border-box;
 
   .for-desktop {
-    display: block;
+    display: block !important;
     @media only screen and (max-width: 1024px) {
-      display: none;
+      display: none !important;
     }
   }
 
   .for-mobile {
-    display: none;
+    display: none !important;
     @media only screen and (max-width: 1024px) {
-      display: block;
+      display: block !important;
     }
   }
   .container-fluid {
@@ -94,6 +94,9 @@ html {
       padding: get-vw(40px) get-vw(57px);
       background-repeat: no-repeat !important;
       background-size: cover !important;
+      @media only screen and (max-width: 1024px) {
+        padding: get-vw(40px, $mobile: true) get-vw(25px, $mobile: true);
+      }
 
       &.home {
         // background: url('~assets/images/background.svg');
@@ -118,7 +121,7 @@ html {
         }
       }
       .btn-find {
-        display: block;
+        display: inline-block;
         background: #363636;
         padding: 20px 40px;
         margin-bottom: 80px;
@@ -142,6 +145,13 @@ html {
           position: absolute;
           right: get-vw(220px);
           top: get-vw(900px);
+          @media only screen and (max-width: 1024px) {
+            width: 100%;
+            right: 0;
+            left: 0;
+            top: unset;
+            text-align: center;
+          }
           .c-btn-find {
             margin-bottom: get-vw(20px);
           }
@@ -174,15 +184,34 @@ html {
         .copy {
           display: flex;
           align-items: center;
+          @media only screen and (max-width: 1024px) {
+            align-items: unset;
+            justify-content: space-between;
+          }
           .red-miles-white,
           .red-miles-red {
             margin-right: 1vw;
             width: get-vw(66.8px);
             height: get-vw(34.28px);
+            @media only screen and (max-width: 1024px) {
+              width: get-vw(66.8px, $mobile: true);
+              height: get-vw(34.28px, $mobile: true);
+            }
+          }
+          .red-miles-white {
+            @media only screen and (max-width: 1024px) {
+              margin-right: unset;
+            }
           }
           p {
             font-size: get-vw(16px);
             font-family: 'PoppinsExtraLight', sans-serif;
+            width: 50%;
+            @media only screen and (max-width: 1024px) {
+              font-size: get-vw(12px, $mobile: true);
+              width: 40%;
+              line-height: get-vw(15px, $mobile: true);
+            }
           }
         }
         .btnAbout {
@@ -199,6 +228,9 @@ html {
           }
         }
         &.header-home {
+          @media only screen and (max-width: 1024px) {
+            justify-content: center;
+          }
           .copy {
             color: white;
           }
@@ -427,6 +459,9 @@ html {
               @media only screen and (max-width: 1024px) {
                 width: 100%;
                 height: 100vw;
+                border-radius: get-vw(25px, $mobile: true);
+                margin-bottom: get-vw(50px, $mobile: true);
+                padding: get-vw(25px, $mobile: true);
               }
               img {
                 width: 100%;
@@ -457,7 +492,7 @@ html {
                       text-align: center;
                       margin: 0 get-vw(30px);
                       @media only screen and (max-width: 1024px) {
-                        margin: 0 get-vw(30px, $mobile: true);
+                        margin: unset;
                       }
                       .title_ {
                         font-size: get-vw(18px);
@@ -471,7 +506,7 @@ html {
                         line-height: get-vw(85px);
                         font-family: 'PoppinsRegular', sans-serif;
                         @media only screen and (max-width: 1024px) {
-                          font-size: get-vw(45px, $mobile: true);
+                          font-size: get-vw(60px, $mobile: true);
                           line-height: get-vw(85px, $mobile: true);
                         }
                       }
@@ -546,7 +581,10 @@ html {
                   .title-reach {
                     font-family: 'PoppinsRegular', sans-serif;
                     text-align: center;
-                    font-size: 1.2vw;
+                    font-size: get-vw(18px);
+                    @media only screen and (max-width: 1024px) {
+                      font-size: get-vw(18px, $mobile: true);
+                    }
                   }
                   .gender-wrapper {
                     text-align: center;
@@ -562,12 +600,18 @@ html {
                       p {
                         font-size: get-vw(18px);
                         font-family: 'PoppinsRegular', sans-serif;
+                        @media only screen and (max-width: 1024px) {
+                          font-size: get-vw(18px, $mobile: true);
+                        }
                       }
                     }
                     .percentage {
                       font-family: 'PoppinsRegular', sans-serif;
                       font-size: get-vw(60px);
                       color: $green;
+                      @media only screen and (max-width: 1024px) {
+                        font-size: get-vw(60px, $mobile: true);
+                      }
                     }
                   }
                 }
@@ -579,26 +623,44 @@ html {
                   .box_ {
                     background: white;
                     border-radius: get-vw(15px);
-                    padding: 5px 10px;
+                    padding: get-vw(5px) get-vw(10px);
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
                     font-family: 'PoppinsRegular', sans-serif;
+                    @media only screen and (max-width: 1024px) {
+                      border-radius: get-vw(15px, $mobile: true);
+                      padding: get-vw(5px, $mobile: true)
+                        get-vw(10px, $mobile: true);
+                    }
                     .fa-clock {
                       font-size: get-vw(20px);
+                      @media only screen and (max-width: 1024px) {
+                        font-size: get-vw(20px, $mobile: true);
+                      }
                     }
                     .age {
-                      font-size: 1.5vw;
+                      font-size: get-vw(25px);
                       line-height: get-vw(40px);
                       color: $green;
+                      @media only screen and (max-width: 1024px) {
+                        font-size: get-vw(25px, $mobile: true);
+                        line-height: get-vw(40px, $mobile: true);
+                      }
                     }
                     .percentage_ {
                       color: #808080;
-                      font-size: 1vw;
+                      font-size: get-vw(15px);
+                      @media only screen and (max-width: 1024px) {
+                        font-size: get-vw(15px, $mobile: true);
+                      }
                     }
                     img {
-                      width: 1vw;
+                      width: get-vw(15px);
+                      @media only screen and (max-width: 1024px) {
+                        width: get-vw(15px, $mobile: true);
+                      }
                     }
                   }
                 }
