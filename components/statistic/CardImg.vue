@@ -1,10 +1,14 @@
 <template>
-  <div class="card-img">
-    <!-- <div class="copy-wrapper">
+  <div class="box_">
+    <div class="copy-wrapper">
       <p class="brand">XL HOME</p>
       <p class="type">brand</p>
-    </div> -->
-    <img src="~/assets/images/xl.png" alt="" />
+    </div>
+    <div class="card_">
+      <div class="card-img">
+        <img src="~/assets/images/xl.png" alt="" />
+      </div>
+    </div>
   </div>
 </template>
 

@@ -3,49 +3,11 @@
     <div class="container__about">
       <HeaderAbout />
       <div class="content statistic">
-        <div class="box_">
-          <div class="copy-wrapper">
-            <p class="brand">XL HOME</p>
-            <p class="type">brand</p>
-          </div>
-          <CardImg />
-        </div>
-        <div class="box_">
-          <div class="copy-wrapper">
-            <p class="brand">XL HOME</p>
-            <p class="type">brand</p>
-          </div>
-          <div class="card_">
-            <CardSosmed />
-          </div>
-        </div>
-        <div class="box_">
-          <div class="copy-wrapper">
-            <p class="brand">XL HOME</p>
-            <p class="type">brand</p>
-          </div>
-          <div class="card_">
-            <CardAudience />
-          </div>
-        </div>
-        <div class="box_">
-          <div class="copy-wrapper">
-            <p class="brand">XL HOME</p>
-            <p class="type">brand</p>
-          </div>
-          <div class="card_">
-            <CardOptimumPostReach />
-          </div>
-        </div>
-        <div class="box_">
-          <div class="copy-wrapper">
-            <p class="brand">XL HOME</p>
-            <p class="type">brand</p>
-          </div>
-          <div class="card_">
-            <CardOptimumPostER />
-          </div>
-        </div>
+        <CardImg />
+        <CardSosmed />
+        <CardAudience />
+        <CardOptimumPostReach />
+        <CardOptimumPostER />
       </div>
       <div class="btn-wrapper_">
         <BtnFind />
