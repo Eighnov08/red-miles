@@ -1,15 +1,14 @@
 <template>
-  <div class="header header-detail">
+  <div v-if="isDesktop" class="header header-detail">
     <div class="copy">
       <nuxt-link to="/" @click.native="$router.go()">
         <Icon name="red-miles-red" />
       </nuxt-link>
       <p>
-        Image to Reach & ER prediction with <br />machine learning in 2 quick
-        steps.
+        Image to Reach & ER prediction with machine learning in 2 quick steps.
       </p>
     </div>
-    <div class="btn-wrapper">
+    <div v-if="isDesktop" class="btn-wrapper">
       <nuxt-link
         v-for="(item, index) in [
           {
@@ -31,5 +30,35 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isDesktop: true,
+    }
+  },
+  created() {
+    if (process.browser) {
+      this.onResize()
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize)
+    })
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
+
+  methods: {
+    onResize() {
+      if (window.innerWidth > 1100) {
+        this.isDesktop = true
+      } else {
+        this.isDesktop = false
+      }
+    },
+  },
+}
 </script>
