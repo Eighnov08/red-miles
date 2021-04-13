@@ -6,11 +6,16 @@
         <Card />
       </div>
     </div>
+    <NavHome />
   </div>
 </template>
 
 <script>
+import NavHome from '@/components/navigation/NavHome'
 export default {
+  components: {
+    NavHome,
+  },
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()

@@ -26,17 +26,17 @@
           <div class="box_">
             <div class="age">17-24</div>
             <p class="percentage_">41,4% from population</p>
-            <img src="~/assets/images/icon-human.png" alt="" />
+            <img src="~/static/store/images/icon-human.png" alt="" />
           </div>
           <div class="box_">
             <div class="age">25-34</div>
             <p class="percentage_">30,4% from population</p>
-            <img src="~/assets/images/icon-human.png" alt="" />
+            <img src="~/static/store/images/icon-human.png" alt="" />
           </div>
           <div class="box_">
             <div class="age">13-17</div>
             <p class="percentage_">17,2% from population</p>
-            <img src="~/assets/images/icon-human.png" alt="" />
+            <img src="~/static/store/images/icon-human.png" alt="" />
           </div>
         </div>
       </div>

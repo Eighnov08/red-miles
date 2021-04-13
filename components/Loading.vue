@@ -1,8 +1,8 @@
 <template lang="html">
   <div v-if="loading" class="loading-page">
     <div class="loading"></div>
-    <img src="~assets/images/loading.svg" class="for-desktop" />
-    <img src="~assets/images/loading-mobile.svg" class="for-mobile" />
+    <img src="~/static/store/images/loading.svg" class="for-desktop" />
+    <img src="~/static/store/images/loading-mobile.svg" class="for-mobile" />
   </div>
 </template>
 

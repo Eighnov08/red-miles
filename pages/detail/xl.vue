@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+    <NavDetail />
   </div>
 </template>
 
@@ -27,6 +28,7 @@ import CardOptimumPostReach from '@/components/statistic/CardOptimumPostReach'
 import CardOptimumPostER from '@/components/statistic/CardOptimumPostER'
 import BtnBack from '@/components/button/BtnBack'
 import BtnFind from '@/components/button/BtnFind'
+import NavDetail from '@/components/navigation/NavDetail'
 export default {
   components: {
     CardImg,
@@ -36,6 +38,7 @@ export default {
     CardOptimumPostER,
     BtnBack,
     BtnFind,
+    NavDetail,
   },
 }
 </script>

@@ -6,7 +6,7 @@
     </div>
     <div class="card_">
       <div class="card-img">
-        <img src="~/assets/images/xl.png" alt="" />
+        <img src="~/static/store/images/xl.png" alt="" />
       </div>
     </div>
   </div>

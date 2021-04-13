@@ -1,8 +1,11 @@
 <template>
   <div class="container-fluid">
-    <img src="~/assets/images/background.svg" class="bg-home desktop-banner" />
     <img
-      src="~/assets/images/background-mobile.svg"
+      src="~/static/store/images/background.svg"
+      class="bg-home desktop-banner"
+    />
+    <img
+      src="~/static/store/images/background-mobile.svg"
       class="bg-home mobile-banner"
     />
     <div class="container home home-welcome">

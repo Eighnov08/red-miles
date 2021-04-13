@@ -97,6 +97,34 @@ html {
         display: block;
       }
     }
+    .nav-home {
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+        padding: get-vw(15px, $mobile: true) 0;
+        background: white;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-top: 1px solid #808080;
+        a {
+          text-decoration: none;
+          .icon-home,
+          .arrow-left {
+            font-size: get-vw(25px, $mobile: true);
+          }
+          .switch-to {
+            font-size: get-vw(12px, $mobile: true);
+            font-family: 'PoppinsSemiBold', sans-serif;
+            color: $red;
+            border: 1px solid $red;
+            padding: get-vw(10px, $mobile: true) get-vw(15px, $mobile: true);
+            border-radius: get-vw(10px, $mobile: true);
+          }
+        }
+      }
+    }
     .container {
       position: absolute;
       top: 0;
@@ -475,6 +503,7 @@ html {
               padding: get-vw(15px, $mobile: true);
               border-radius: get-vw(15px, $mobile: true);
               font-size: get-vw(15px, $mobile: true);
+              margin-bottom: get-vw(50px, $mobile: true);
             }
             .send {
               color: #fc4750;
