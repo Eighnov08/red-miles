@@ -84,6 +84,19 @@ html {
       width: 100%;
       height: 100%;
     }
+
+    .desktop-banner {
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .mobile-banner {
+      display: none;
+      @media only screen and (max-width: 1024px) {
+        display: block;
+      }
+    }
     .container {
       position: absolute;
       top: 0;
@@ -95,6 +108,12 @@ html {
       background-size: cover !important;
       @media only screen and (max-width: 1024px) {
         padding: get-vw(40px, $mobile: true) get-vw(25px, $mobile: true);
+      }
+
+      &.home-welcome {
+        @media only screen and (max-width: 1024px) {
+          padding: unset;
+        }
       }
 
       &.home {
@@ -139,7 +158,9 @@ html {
         color: white;
         text-decoration: none;
         font-family: 'PoppinsRegular', sans-serif;
+        font-size: get-vw(14px);
         @media only screen and (max-width: 1024px) {
+          font-size: get-vw(14px, $mobile: true);
           padding: get-vw(20px, $mobile: true) get-vw(40px, $mobile: true);
           margin-bottom: get-vw(80px, $mobile: true);
           border-radius: get-vw(10px, $mobile: true);
@@ -245,6 +266,12 @@ html {
         &.header-home {
           @media only screen and (max-width: 1024px) {
             justify-content: center;
+            padding: get-vw(40px, $mobile: true) get-vw(25px, $mobile: true);
+          }
+          .info-circle {
+            @media only screen and (max-width: 1024px) {
+              font-size: get-vw(20px, $mobile: true);
+            }
           }
           .copy {
             color: white;
@@ -281,17 +308,81 @@ html {
       }
       .content {
         padding: 10vw 10vw 5vw;
+        &.home {
+          @media only screen and (max-width: 1024px) {
+            padding: unset;
+          }
+          .copy-wrapper {
+            @media only screen and (max-width: 1024px) {
+              position: absolute;
+              top: get-vw(290px, $mobile: true);
+              left: 0;
+              right: 0;
+              border-radius: get-vw(20px, $mobile: true);
+              background: white;
+              padding: get-vw(50px, $mobile: true) 0;
+              margin: 0 auto;
+              text-align: center;
+              .title-welcome {
+                font-size: get-vw(40px, $mobile: true);
+                font-family: 'PoppinsSemiBold', sans-serif;
+                color: $red;
+                width: 90%;
+                margin: 0 auto get-vw(25px, $mobile: true);
+              }
+              .job-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                .job {
+                  padding: get-vw(35px, $mobile: true)
+                    get-vw(20px, $mobile: true);
+                  border: 1px solid #808080;
+                  border-radius: get-vw(20px, $mobile: true);
+                  text-decoration: none;
+                  width: 35%;
+                  img {
+                    width: 100%;
+                    margin-bottom: get-vw(20px, $mobile: true);
+                  }
+                  .job-title {
+                    font-family: 'PoppinsRegular', sans-serif;
+                    font-size: get-vw(12px, $mobile: true);
+                    color: $red;
+                  }
+                }
+              }
+            }
+          }
+        }
         .card {
           width: get-vw(250px);
           height: fit-content;
           background: #fff;
           padding: get-vw(27px);
-          border-radius: 25px;
+          border-radius: get-vw(20px);
           display: flex;
           flex-direction: column;
           justify-content: center;
           font-family: 'PoppinsExtraLight', sans-serif;
+          @media only screen and (max-width: 1024px) {
+            width: 100%;
+            padding: get-vw(27px, $mobile: true);
+            border-radius: get-vw(20px, $mobile: true);
+          }
+          .hello {
+            font-family: 'PoppinsSemiBold', sans-serif;
+            font-size: 20px;
+            color: $red;
+            width: 90%;
+            margin-bottom: 20px;
+          }
           .v-select {
+            margin-bottom: get-vw(12px);
+            @media only screen and (max-width: 1024px) {
+              margin-bottom: get-vw(12px, $mobile: true);
+            }
+            #vs1,
             #vs2,
             #vs3 {
               &__combobox {
@@ -299,11 +390,19 @@ html {
                 border-radius: get-vw(15px);
                 background: #f2f3f5;
                 border: none;
-                margin-bottom: get-vw(12px);
+                @media only screen and (max-width: 1024px) {
+                  padding: get-vw(15px, $mobile: true)
+                    get-vw(10px, $mobile: true);
+                  border-radius: get-vw(15px, $mobile: true);
+                }
               }
               &__listbox {
                 border-radius: get-vw(20px);
                 font-size: get-vw(12px);
+                @media only screen and (max-width: 1024px) {
+                  border-radius: get-vw(20px, $mobile: true);
+                  font-size: get-vw(12px, $mobile: true);
+                }
               }
             }
             .vs {
@@ -311,18 +410,29 @@ html {
                 color: #4b4c4f;
                 font-family: 'PoppinsExtraLight', sans-serif;
                 font-size: get-vw(12px);
+                @media only screen and (max-width: 1024px) {
+                  font-size: get-vw(12px, $mobile: true);
+                }
               }
               &__selected {
                 font-size: get-vw(12px);
+                @media only screen and (max-width: 1024px) {
+                  font-size: get-vw(12px, $mobile: true);
+                }
               }
             }
           }
           .file-wrapper {
             background: #f2f3f5;
-            padding: get-vw(50px) 0 get-vw(50px) 0;
+            padding: get-vw(50px) 0;
             margin-bottom: get-vw(12px);
             border-radius: get-vw(15px);
             text-align: center;
+            @media only screen and (max-width: 1024px) {
+              padding: get-vw(120px, $mobile: true) 0;
+              margin-bottom: get-vw(12px, $mobile: true);
+              border-radius: get-vw(15px, $mobile: true);
+            }
             #select-file {
               display: none;
             }
@@ -330,15 +440,24 @@ html {
               color: #bfbfbf;
               font-size: get-vw(70px);
               cursor: pointer;
+              @media only screen and (max-width: 1024px) {
+                font-size: get-vw(70px, $mobile: true);
+              }
               &:hover {
                 color: $green;
               }
             }
             h2 {
               font-size: get-vw(20px);
+              @media only screen and (max-width: 1024px) {
+                font-size: get-vw(20px, $mobile: true);
+              }
             }
             p {
               font-size: get-vw(12px);
+              @media only screen and (max-width: 1024px) {
+                font-size: get-vw(12px, $mobile: true);
+              }
             }
           }
           .submit {
@@ -349,9 +468,14 @@ html {
             border-radius: get-vw(15px);
             background-color: unset;
             color: #fc4750;
-            font-size: 15px;
+            font-size: get-vw(15px);
             font-family: 'PoppinsSemiBold', sans-serif;
             cursor: pointer;
+            @media only screen and (max-width: 1024px) {
+              padding: get-vw(15px, $mobile: true);
+              border-radius: get-vw(15px, $mobile: true);
+              font-size: get-vw(15px, $mobile: true);
+            }
             .send {
               color: #fc4750;
               text-decoration: none;
@@ -457,11 +581,17 @@ html {
               }
               .brand {
                 font-family: 'PoppinsRegular', sans-serif;
-                font-family: get-vw(30px);
+                font-size: get-vw(30px);
+                @media only screen and (max-width: 1024px) {
+                  font-size: get-vw(30px, $mobile: true);
+                }
               }
               .type {
                 font-family: 'PoppinsExtraLight', sans-serif;
-                font-family: get-vw(15px);
+                font-size: get-vw(15px);
+                @media only screen and (max-width: 1024px) {
+                  font-size: get-vw(15px, $mobile: true);
+                }
               }
               &.sosmed {
                 display: flex;
@@ -696,7 +826,7 @@ html {
                       line-height: get-vw(40px);
                       color: $green;
                       @media only screen and (max-width: 1024px) {
-                        font-size: get-vw(25px, $mobile: true);
+                        font-size: get-vw(22px, $mobile: true);
                         line-height: get-vw(40px, $mobile: true);
                       }
                     }
@@ -704,7 +834,7 @@ html {
                       color: #808080;
                       font-size: get-vw(15px);
                       @media only screen and (max-width: 1024px) {
-                        font-size: get-vw(15px, $mobile: true);
+                        font-size: get-vw(12px, $mobile: true);
                       }
                     }
                     img {

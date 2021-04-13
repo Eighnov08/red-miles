@@ -8,7 +8,7 @@
       <nuxt-link to="/about/redmiles" @click.native="$router.go()">
         <font-awesome-icon
           v-if="!isDesktop"
-          class="plus-circles"
+          class="info-circle"
           :icon="['fas', 'info-circle']"
         />
       </nuxt-link>
