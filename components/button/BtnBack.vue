@@ -1,8 +1,8 @@
 <template>
-  <nuxt-link class="btn-back for-desktop" to="/" @click.native="$router.go()">
+  <a class="btn-back for-desktop" @click="$router.go(-1)">
     <font-awesome-icon class="arrow-left" :icon="['fas', 'arrow-left']" />
     <p>Back</p>
-  </nuxt-link>
+  </a>
 </template>
 
 <script>

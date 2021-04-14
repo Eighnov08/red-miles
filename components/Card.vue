@@ -1,13 +1,16 @@
 <template>
   <div>
     <div v-if="isDesktop" class="card">
-      <v-select
-        v-for="(item, index) in dropdown"
-        :key="index"
-        v-model="item.value"
-        :options="item.options"
-        :placeholder="item.placeholder"
-      ></v-select>
+      <InputSelect
+        :options="['Designer', 'Content Writer']"
+        :default="'I\'m a'"
+        class="select"
+      />
+      <InputSelect
+        :options="['XL Home', 'Joyday', 'Grab', 'Starbucks', 'Freebees']"
+        :default="'Select Brand'"
+        class="select"
+      />
       <div class="file-wrapper">
         <font-awesome-icon
           class="plus-circles"
@@ -24,13 +27,11 @@
     </div>
     <div v-if="!isDesktop" class="card">
       <div class="hello">Hi! Designer, welcome to Red Miles.</div>
-      <v-select
-        v-for="(item, index) in dropdownMobile"
-        :key="index"
-        v-model="item.value"
-        :options="item.options"
-        :placeholder="item.placeholder"
-      ></v-select>
+      <InputSelect
+        :options="['XL Home', 'Joyday', 'Grab', 'Starbucks', 'Freebees']"
+        :default="'Select Brand'"
+        class="select"
+      />
       <div class="file-wrapper">
         <font-awesome-icon
           class="plus-circles"
@@ -49,28 +50,67 @@
 </template>
 
 <script>
+import InputSelect from '@/components/input/Select.vue'
+
 export default {
+  components: {
+    InputSelect,
+  },
   data() {
     return {
-      dropdown: [
-        {
-          value: '',
-          options: ['Designer', 'Developer', 'Content Writer'],
-          placeholder: "I'm a",
-        },
-        {
-          value: '',
-          options: ['XL Home', 'Joyday', 'Grab'],
-          placeholder: 'Select Brand',
-        },
-      ],
-      dropdownMobile: [
-        {
-          value: '',
-          options: ['XL Home', 'Joyday', 'Grab'],
-          placeholder: 'Select Brand',
-        },
-      ],
+      value: {
+        jobs: '',
+        brand: '',
+      },
+      data: {
+        jobs: [
+          {
+            value: 'Designer',
+            options: 'Designer',
+          },
+          {
+            value: 'Developer',
+            options: 'Developer',
+          },
+          {
+            value: 'Content Writer',
+            options: 'Content Writer',
+          },
+        ],
+        brands: [
+          {
+            value: 'XL Home',
+            options: 'XL Home',
+          },
+          {
+            value: 'Joyday',
+            options: 'Joyday',
+          },
+          {
+            value: 'Grab',
+            options: 'Grab',
+          },
+        ],
+      },
+      // dropdown: [
+      //   {
+      //     value: '',
+      //     options: ['Designer', 'Developer', 'Content Writer'],
+      //     placeholder: "I'm a",
+      //   },
+      //   {
+      //     value: '',
+      //     options: ['XL Home', 'Joyday', 'Grab'],
+      //     placeholder: 'Select Brand',
+      //   },
+      // ],
+      // dropdownMobile: [
+      //   {
+      //     value: '',
+      //     options: ['XL Home', 'Joyday', 'Grab'],
+      //     placeholder: 'Select Brand',
+      //   },
+      // ],
       isDesktop: true,
     }
   },

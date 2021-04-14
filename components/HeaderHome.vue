@@ -2,10 +2,10 @@
   <div class="header header-home">
     <div class="copy">
       <div v-if="!isDesktop" class="blank"></div>
-      <nuxt-link to="/" @click.native="$router.go()">
+      <nuxt-link to="/">
         <Icon name="red-miles-white" />
       </nuxt-link>
-      <nuxt-link to="/about/redmiles" @click.native="$router.go()">
+      <nuxt-link to="/about/redmiles">
         <font-awesome-icon
           v-if="!isDesktop"
           class="info-circle"

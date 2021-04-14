@@ -5,7 +5,5 @@
 </template>
 
 <script>
-export default {
-  layout: 'Loading',
-}
+export default {}
 </script>

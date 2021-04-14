@@ -1,7 +1,7 @@
 <template>
   <div class="header header-detail">
     <div class="copy">
-      <nuxt-link to="/" @click.native="$router.go()">
+      <nuxt-link to="/">
         <Icon name="red-miles-red" />
       </nuxt-link>
       <p>
