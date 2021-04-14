@@ -86,4 +86,10 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   target: 'static',
+  env: {
+    PRODUCTION_BASE_PATH: process.env.PRODUCTION_BASE_PATH,
+  },
+  router: {
+    base: process.env.PRODUCTION_BASE_PATH,
+  },
 }
