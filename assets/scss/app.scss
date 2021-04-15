@@ -142,12 +142,13 @@ html {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        border-top: 1px solid #808080;
+        box-shadow: 10px 10px 10px 10px #808080;
         a {
           text-decoration: none;
           .icon-home,
           .arrow-left {
             font-size: get-vw(25px, $mobile: true);
+            color: #4b4c4f;
           }
           .switch-to {
             font-size: get-vw(12px, $mobile: true);
@@ -286,6 +287,11 @@ html {
           @media only screen and (max-width: 1024px) {
             align-items: unset;
             justify-content: space-between;
+          }
+          a {
+            @media only screen and (max-width: 1024px) {
+              height: fit-content;
+            }
           }
           .red-miles-white,
           .red-miles-red {
@@ -431,6 +437,7 @@ html {
           @media only screen and (max-width: 1024px) {
             width: 100%;
             padding: get-vw(27px, $mobile: true);
+            padding-bottom: get-vw(75px, $mobile: true);
             border-radius: get-vw(20px, $mobile: true);
           }
 
@@ -571,7 +578,6 @@ html {
               padding: get-vw(15px, $mobile: true);
               border-radius: get-vw(15px, $mobile: true);
               font-size: get-vw(15px, $mobile: true);
-              margin-bottom: get-vw(50px, $mobile: true);
             }
             .send {
               color: #fc4750;
