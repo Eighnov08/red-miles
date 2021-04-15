@@ -406,7 +406,7 @@ html {
                 .job {
                   padding: get-vw(35px, $mobile: true)
                     get-vw(20px, $mobile: true);
-                  border: 1px solid #808080;
+                  box-shadow: 0 0 10px 0 #808080;
                   border-radius: get-vw(20px, $mobile: true);
                   text-decoration: none;
                   width: 35%;
