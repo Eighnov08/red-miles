@@ -112,6 +112,7 @@ html {
     }
   }
   .container-fluid {
+    z-index: 10;
     .desktop-banner,
     .mobile-banner {
       width: 100%;
