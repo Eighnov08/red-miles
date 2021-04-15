@@ -1,22 +1,22 @@
 <template>
   <div class="header header-home">
     <div class="copy">
-      <div v-if="!isDesktop" class="blank"></div>
+      <div v-show="!isDesktop" class="blank"></div>
       <nuxt-link to="/">
         <Icon name="red-miles-white" />
       </nuxt-link>
       <nuxt-link to="/about/redmiles">
         <font-awesome-icon
-          v-if="!isDesktop"
+          v-show="!isDesktop"
           class="info-circle"
           :icon="['fas', 'info-circle']"
         />
       </nuxt-link>
-      <p v-if="isDesktop">
+      <p v-show="isDesktop">
         Image to Reach & ER prediction with machine learning in 2 quick steps.
       </p>
     </div>
-    <nuxt-link v-if="isDesktop" to="/about/redmiles" class="btnAbout"
+    <nuxt-link v-show="isDesktop" to="/about/redmiles" class="btnAbout"
       >About RED MILES</nuxt-link
     >
   </div>

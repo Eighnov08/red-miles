@@ -11,8 +11,8 @@
     <div class="container home home-welcome">
       <HeaderHome />
       <div class="content home">
-        <Card v-if="isDesktop" />
-        <JobsMobile v-if="!isDesktop" />
+        <Card v-show="isDesktop" />
+        <JobsMobile v-show="!isDesktop" />
       </div>
     </div>
   </div>

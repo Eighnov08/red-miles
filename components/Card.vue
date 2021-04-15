@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="isDesktop" class="card">
+    <div v-show="isDesktop" class="card">
       <InputSelect
         :options="['Designer', 'Content Writer']"
         :default="'I\'m a'"
@@ -25,7 +25,7 @@
         <button type="submit" class="submit">Send</button></nuxt-link
       >
     </div>
-    <div v-if="!isDesktop" class="card">
+    <div v-show="!isDesktop" class="card">
       <div class="hello">Hi! Designer, welcome to Red Miles.</div>
       <InputSelect
         :options="['XL Home', 'Joyday', 'Grab', 'Starbucks', 'Freebees']"

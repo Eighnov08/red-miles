@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!isDesktop" class="nav-home">
+  <div v-show="!isDesktop" class="nav-home">
     <nuxt-link to="/">
       <font-awesome-icon class="icon-home" :icon="['fas', 'home']" />
     </nuxt-link>

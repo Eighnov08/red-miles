@@ -8,7 +8,7 @@
         Image to Reach & ER prediction with machine learning in 2 quick steps.
       </p>
     </div>
-    <div v-if="isDesktop" class="btn-wrapper">
+    <div v-show="isDesktop" class="btn-wrapper">
       <nuxt-link
         v-for="(item, index) in [
           {
