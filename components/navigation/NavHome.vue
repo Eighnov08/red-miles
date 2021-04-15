@@ -17,7 +17,7 @@ export default {
     }
   },
   created() {
-    if (process.browser) {
+    if (process.client) {
       this.onResize()
     }
   },
