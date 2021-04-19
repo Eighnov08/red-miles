@@ -75,6 +75,7 @@ export default {
     proxy: true,
     baseURL: process.env.API_URL,
     browserBaseURL: process.env.API_URL,
+    proxyHeaders: false,
     headers: {
       accept: 'application/json',
     },
