@@ -81,12 +81,11 @@ export default {
   },
 
   proxy: {
-    // '/data/': {
-    //   target: process.env.API_URL,
-    //   pathRewrite: { '^/data/': '' },
-    //   changeOrigin: true,
-    // },
-    '/data/': 'http://redcomm-betatest.com/users/fajar/data.json',
+    '/data/': {
+      target: process.env.API_URL,
+      pathRewrite: { '^/data/': '' },
+      changeOrigin: true,
+    },
   },
 
   publicRuntimeConfig: {
