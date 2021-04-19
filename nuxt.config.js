@@ -75,20 +75,18 @@ export default {
     proxy: true,
     baseURL: process.env.API_URL,
     browserBaseURL: process.env.API_URL,
-    proxyHeaders: false,
     headers: {
       accept: 'application/json',
     },
   },
 
   proxy: {
-    '/data': {
-      target: process.env.API_URL,
-      // target: 'https://red2.redcomm.co.id/api/api/v1',
-      // target: 'http://127.0.0.1:8000/api/v1',
-      pathRewrite: { '^/data': '' },
-      changeOrigin: true,
-    },
+    // '/data/': {
+    //   target: process.env.API_URL,
+    //   pathRewrite: { '^/data/': '' },
+    //   changeOrigin: true,
+    // },
+    '/data/': 'http://redcomm-betatest.com/users/fajar/data.json',
   },
 
   publicRuntimeConfig: {
