@@ -2,9 +2,9 @@
   <div class="container-fluid">
     <div class="container">
       <div class="about">
-        <HeaderAbout />
+        <HeaderAbout v-if="isDesktop" />
         <div class="content about">
-          <ArticleRedMiles />
+          <Article :list="articles.article" :title="articles.title_" />
         </div>
         <div class="btn-wrapper-about">
           <BtnBack />
@@ -23,11 +23,44 @@ export default {
     BtnBack,
     NavArticle,
   },
-  mounted() {
+  data() {
+    return {
+      isDesktop: true,
+      articles: [],
+    }
+  },
+  created() {
+    if (process.browser) {
+      this.onResize()
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
+  async mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
       setTimeout(() => this.$nuxt.$loading.finish(), 500)
+      window.addEventListener('resize', this.onResize)
     })
+    await this.setArticle()
+  },
+  methods: {
+    onResize() {
+      if (window.innerWidth > 1100) {
+        this.isDesktop = true
+      } else {
+        this.isDesktop = false
+      }
+    },
+    async setArticle() {
+      try {
+        const article = (await this.$axios.get('data')).data
+        this.articles = article.articles.redMiles
+      } catch (error) {
+        console.log(error.message)
+      }
+    },
   },
 }
 </script>

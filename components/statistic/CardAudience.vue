@@ -12,30 +12,20 @@
               <font-awesome-icon class="fa-mars" :icon="['fas', 'mars']" />
               <p>Male</p>
             </div>
-            <div class="percentage">72%</div>
+            <div class="percentage">{{ malePercent }}</div>
           </div>
           <div class="gender-wrapper">
             <div class="box female">
               <font-awesome-icon class="fa-venus" :icon="['fas', 'venus']" />
               <p>Female</p>
             </div>
-            <div class="percentage">80%</div>
+            <div class="percentage">{{ femalePercent }}</div>
           </div>
         </div>
         <div class="population">
-          <div class="box_">
-            <div class="age">17-24</div>
-            <p class="percentage_">41,4% from population</p>
-            <img src="~/static/store/images/icon-human.png" alt="" />
-          </div>
-          <div class="box_">
-            <div class="age">25-34</div>
-            <p class="percentage_">30,4% from population</p>
-            <img src="~/static/store/images/icon-human.png" alt="" />
-          </div>
-          <div class="box_">
-            <div class="age">13-17</div>
-            <p class="percentage_">17,2% from population</p>
+          <div v-for="(item, index) in list" :key="index" class="box_">
+            <div class="age">{{ item.age }}</div>
+            <p class="percentage_">{{ item.percent }} from population</p>
             <img src="~/static/store/images/icon-human.png" alt="" />
           </div>
         </div>
@@ -45,5 +35,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    list: {
+      type: Array,
+      default: () => [],
+    },
+    malePercent: {
+      type: String,
+      default: '',
+    },
+    femalePercent: {
+      type: String,
+      default: '',
+    },
+  },
+}
 </script>
