@@ -66,6 +66,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     'nuxt-vue-select',
   ],
 
@@ -85,6 +86,7 @@ export default {
       // target: 'https://red2.redcomm.co.id/api/api/v1',
       // target: 'http://127.0.0.1:8000/api/v1',
       pathRewrite: { '^/data': '' },
+      changeOrigin: true,
     },
   },
 
