@@ -55,7 +55,7 @@ export default {
     },
     async setArticle() {
       try {
-        const article = await this.$axios.get('data')
+        const article = (await this.$axios.get('data')).data
         this.articles = article.articles.redMiles
       } catch (error) {
         console.log(error.message)
