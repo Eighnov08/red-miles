@@ -64,7 +64,7 @@ export default {
   methods: {
     async setCardAudience() {
       try {
-        const audience_ = (await this.$axios.get('data')).data
+        const audience_ = (await this.$axios.get('db')).data
         this.audiences = audience_.card.audience
       } catch (error) {
         console.log(error.message)
@@ -72,7 +72,7 @@ export default {
     },
     async setCardOptimumPost() {
       try {
-        const optimumPost_ = (await this.$axios.get('data')).data
+        const optimumPost_ = (await this.$axios.get('db')).data
         this.optimumPostReach = optimumPost_.card.optimumPosts.reach
         this.optimumPostER = optimumPost_.card.optimumPosts.er
       } catch (error) {

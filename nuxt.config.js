@@ -81,9 +81,9 @@ export default {
   },
 
   proxy: {
-    '/data/': {
+    '/db/': {
       target: process.env.API_URL,
-      pathRewrite: { '^/data/': '' },
+      pathRewrite: { '^/db/': '' },
       changeOrigin: true,
     },
   },
