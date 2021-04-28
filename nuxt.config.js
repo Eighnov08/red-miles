@@ -68,7 +68,12 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     'nuxt-vue-select',
+    '@nuxtjs/gtm',
   ],
+  gtm: {
+    id: 'GTM-P8SKBB7',
+    enabled: true,
+  },
 
   axios: {
     credentials: false,
